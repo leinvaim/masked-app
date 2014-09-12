@@ -7,9 +7,10 @@
 //
 
 #import "ExploreCollectionViewController.h"
+#import "ExploreCollectionViewCell.h"
 
 @interface ExploreCollectionViewController ()
-
+@property (strong, nonatomic) NSArray *posts;
 @end
 
 @implementation ExploreCollectionViewController
@@ -27,6 +28,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://ec2-54-206-66-123.ap-southeast-2.compute.amazonaws.com/masked/api/index.php/me/explore" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+      self.posts = responseObject;
+      [self.collectionView reloadData];
+      
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+      NSLog(@"Error: %@", error);
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,16 +51,20 @@
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return [self.posts count];
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-        static NSString *identifier = @"explore";
-        
-        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    
-                return cell;
+  static NSString *identifier = @"explore";
+
+  ExploreCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+  NSDictionary *post = [self.posts objectAtIndex:indexPath.row];
+  NSURL *url = [NSURL URLWithString:[post objectForKey:@"imageUrl"]];
+  NSData *data = [NSData dataWithContentsOfURL:url];
+  
+  cell.postImageView.image = [UIImage imageWithData:data];
+  //  cell.postImageView.image = [UIImage imageNamed:@"image.jpg"];
+  return cell;
 }
 
 /*
