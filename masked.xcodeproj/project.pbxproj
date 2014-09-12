@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4EB31CE919C35C8000156653 /* ExploreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB31CE819C35C8000156653 /* ExploreCollectionViewCell.m */; };
+		4EB31CEC19C3639400156653 /* Main_iPhone_craig.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB31CEA19C3639400156653 /* Main_iPhone_craig.storyboard */; };
 		5957390F43564F3F8DE80D60 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D67BCED5774094A1C07DBE /* libPods.a */; };
 		A6315CD219C3355700435C37 /* ProfileCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */; };
 		A6315CD519C3412200435C37 /* ProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6315CD419C3412200435C37 /* ProfileHeaderView.m */; };
@@ -48,6 +49,7 @@
 		07D67BCED5774094A1C07DBE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB31CE719C35C8000156653 /* ExploreCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreCollectionViewCell.h; sourceTree = "<group>"; };
 		4EB31CE819C35C8000156653 /* ExploreCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreCollectionViewCell.m; sourceTree = "<group>"; };
+		4EB31CEB19C3639400156653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_craig.storyboard; sourceTree = "<group>"; };
 		A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewController.h; sourceTree = "<group>"; };
 		A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewController.m; sourceTree = "<group>"; };
 		A6315CD319C3412200435C37 /* ProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileHeaderView.h; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				A643C3FB19AF2CF00053505F /* AppDelegate.h */,
 				A643C3FC19AF2CF00053505F /* AppDelegate.m */,
 				A643C3FE19AF2CF00053505F /* Main_iPhone.storyboard */,
+				4EB31CEA19C3639400156653 /* Main_iPhone_craig.storyboard */,
 				4EB31CE719C35C8000156653 /* ExploreCollectionViewCell.h */,
 				4EB31CE819C35C8000156653 /* ExploreCollectionViewCell.m */,
 				A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */,
@@ -287,6 +290,7 @@
 				A66FB90F19B5D6050062CC0F /* image.jpg in Resources */,
 				A66FB91119B5D75A0062CC0F /* image2.jpg in Resources */,
 				A643C40B19AF2CF00053505F /* Images.xcassets in Resources */,
+				4EB31CEC19C3639400156653 /* Main_iPhone_craig.storyboard in Resources */,
 				A643C40019AF2CF00053505F /* Main_iPhone.storyboard in Resources */,
 				A643C3F719AF2CF00053505F /* InfoPlist.strings in Resources */,
 			);
@@ -372,6 +376,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4EB31CEA19C3639400156653 /* Main_iPhone_craig.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EB31CEB19C3639400156653 /* Base */,
+			);
+			name = Main_iPhone_craig.storyboard;
+			sourceTree = "<group>";
+		};
 		A643C3F519AF2CF00053505F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
