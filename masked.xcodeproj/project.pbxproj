@@ -17,7 +17,7 @@
 		A643C3F719AF2CF00053505F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A643C3F519AF2CF00053505F /* InfoPlist.strings */; };
 		A643C3F919AF2CF00053505F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A643C3F819AF2CF00053505F /* main.m */; };
 		A643C3FD19AF2CF00053505F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A643C3FC19AF2CF00053505F /* AppDelegate.m */; };
-		A643C40019AF2CF00053505F /* Main_iPhone_craig.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A643C3FE19AF2CF00053505F /* Main_iPhone_craig.storyboard */; };
+		A643C40019AF2CF00053505F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A643C3FE19AF2CF00053505F /* Main_iPhone.storyboard */; };
 		A643C40619AF2CF00053505F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A643C40519AF2CF00053505F /* FirstViewController.m */; };
 		A643C40919AF2CF00053505F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A643C40819AF2CF00053505F /* SecondViewController.m */; };
 		A643C40B19AF2CF00053505F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A643C40A19AF2CF00053505F /* Images.xcassets */; };
@@ -62,7 +62,7 @@
 		A643C3FA19AF2CF00053505F /* masked-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "masked-Prefix.pch"; sourceTree = "<group>"; };
 		A643C3FB19AF2CF00053505F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A643C3FC19AF2CF00053505F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A643C3FF19AF2CF00053505F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_craig.storyboard; sourceTree = "<group>"; };
+		A643C3FF19AF2CF00053505F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A643C40419AF2CF00053505F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		A643C40519AF2CF00053505F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		A643C40719AF2CF00053505F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 				A66FB91019B5D75A0062CC0F /* image2.jpg */,
 				A643C3FB19AF2CF00053505F /* AppDelegate.h */,
 				A643C3FC19AF2CF00053505F /* AppDelegate.m */,
-				A643C3FE19AF2CF00053505F /* Main_iPhone_craig.storyboard */,
+				A643C3FE19AF2CF00053505F /* Main_iPhone.storyboard */,
 				4EB31CE719C35C8000156653 /* ExploreCollectionViewCell.h */,
 				4EB31CE819C35C8000156653 /* ExploreCollectionViewCell.m */,
 				A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */,
@@ -287,7 +287,7 @@
 				A66FB90F19B5D6050062CC0F /* image.jpg in Resources */,
 				A66FB91119B5D75A0062CC0F /* image2.jpg in Resources */,
 				A643C40B19AF2CF00053505F /* Images.xcassets in Resources */,
-				A643C40019AF2CF00053505F /* Main_iPhone_craig.storyboard in Resources */,
+				A643C40019AF2CF00053505F /* Main_iPhone.storyboard in Resources */,
 				A643C3F719AF2CF00053505F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,12 +380,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A643C3FE19AF2CF00053505F /* Main_iPhone_craig.storyboard */ = {
+		A643C3FE19AF2CF00053505F /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A643C3FF19AF2CF00053505F /* Base */,
 			);
-			name = Main_iPhone_craig.storyboard;
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		A643C41A19AF2CF10053505F /* InfoPlist.strings */ = {
