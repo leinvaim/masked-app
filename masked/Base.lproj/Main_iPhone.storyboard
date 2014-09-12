@@ -156,19 +156,18 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bJV-at-Ebo">
-                                    <rect key="frame" x="82" y="12" width="113" height="30"/>
+                                    <rect key="frame" x="82" y="12" width="195" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Swapped">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <segue destination="B0o-eR-cek" kind="push" id="Aca-Mk-Kex"/>
+                                        <segue destination="B0o-eR-cek" kind="push" id="EXj-M5-ZzO"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <connections>
                                 <outlet property="profilePic" destination="s0R-jY-1kL" id="ka8-pr-jjw"/>
-                                <outlet property="swappedList" destination="bJV-at-Ebo" id="9SZ-qV-GzI"/>
                             </connections>
                         </collectionReusableView>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="test2" id="Z1t-EH-iZg">
@@ -186,24 +185,31 @@
             </objects>
             <point key="canvasLocation" x="-156" y="832"/>
         </scene>
-        <!--Swapped List Controller-->
+        <!--Swapped List Controller - Swapped-->
         <scene sceneID="lft-M2-Zgx">
             <objects>
                 <tableViewController id="B0o-eR-cek" customClass="SwappedListController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" id="0Dj-DE-98l">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" id="0Dj-DE-98l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="swappedProfile" rowHeight="69" id="Liv-hy-nqp" customClass="SwappedListCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="69"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="swappedList" rowHeight="97" id="asE-0s-a6i" customClass="SwappedListCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="97"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Liv-hy-nqp" id="zLl-x5-rFW">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="asE-0s-a6i" id="8Ul-6q-klg">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DFD-56-CoK">
-                                            <rect key="frame" x="20" y="11" width="211" height="37"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PgD-Iq-D5o">
+                                            <rect key="frame" x="35" y="22" width="178" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LaT-8y-KcH">
+                                            <rect key="frame" x="35" y="22" width="178" height="51"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,9 +217,6 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="swappedListCell" destination="DFD-56-CoK" id="tA2-lw-cFe"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -221,7 +224,7 @@
                             <outlet property="delegate" destination="B0o-eR-cek" id="l2g-F0-fmw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0De-9S-NaY"/>
+                    <navigationItem key="navigationItem" title="Swapped" id="0De-9S-NaY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qc-aq-dM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

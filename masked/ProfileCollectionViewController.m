@@ -65,7 +65,9 @@
         header = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                     withReuseIdentifier:@"profileHeader"
                                                            forIndexPath:indexPath];
-        header.swappedList.text = @"hello world";
+        header.swappedList.titleLabel.text = @"List people";
+    
+//        header.swappedList.text = @"hello world";
 //        header.headerLabel.text = @"Car Image Gallery";
     }
     return header;

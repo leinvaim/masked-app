@@ -8,7 +8,6 @@
 
 #import "SwappedListController.h"
 #import "SwappedListCell.h"
-
 @interface SwappedListController ()
 
 @end
@@ -54,16 +53,16 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 10;
+    return 5;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SwappedListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"swappedProfile" forIndexPath:indexPath];
-//    cell.peopleList.currentImage.CIImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"image2.jpg"].CIImage];
-//
-//    
+    SwappedListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"swappedList" forIndexPath:indexPath];
+    
+    cell.peopleList.titleLabel.text = @"People one";
+    
     return cell;
 }
 
