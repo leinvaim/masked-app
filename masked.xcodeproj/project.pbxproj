@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EB31CE919C35C8000156653 /* ExploreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB31CE819C35C8000156653 /* ExploreCollectionViewCell.m */; };
-		4EB31CEC19C3639400156653 /* Main_iPhone_craig.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB31CEA19C3639400156653 /* Main_iPhone_craig.storyboard */; };
 		5957390F43564F3F8DE80D60 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D67BCED5774094A1C07DBE /* libPods.a */; };
 		A6315CD219C3355700435C37 /* ProfileCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */; };
 		A6315CD519C3412200435C37 /* ProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6315CD419C3412200435C37 /* ProfileHeaderView.m */; };
@@ -28,6 +26,9 @@
 		A643C41C19AF2CF10053505F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A643C41A19AF2CF10053505F /* InfoPlist.strings */; };
 		A643C41E19AF2CF10053505F /* maskedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A643C41D19AF2CF10053505F /* maskedTests.m */; };
 		A6557CE319B74FA60064DABC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6557CE219B74FA60064DABC /* ImageIO.framework */; };
+		A65E296719C35DC600E68804 /* SwappedListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E296619C35DC600E68804 /* SwappedListController.m */; };
+		A65E296A19C35EDA00E68804 /* SwappedListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E296919C35EDA00E68804 /* SwappedListCell.m */; };
+		A65E296D19C3654F00E68804 /* ExploreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E296C19C3654F00E68804 /* ExploreCollectionViewCell.m */; };
 		A66FB90F19B5D6050062CC0F /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A66FB90E19B5D6050062CC0F /* image.jpg */; };
 		A66FB91119B5D75A0062CC0F /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A66FB91019B5D75A0062CC0F /* image2.jpg */; };
 		A6D2D1D519C31CB500A7D88B /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2D1D419C31CB500A7D88B /* FeedTableViewController.m */; };
@@ -47,9 +48,6 @@
 
 /* Begin PBXFileReference section */
 		07D67BCED5774094A1C07DBE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB31CE719C35C8000156653 /* ExploreCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreCollectionViewCell.h; sourceTree = "<group>"; };
-		4EB31CE819C35C8000156653 /* ExploreCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreCollectionViewCell.m; sourceTree = "<group>"; };
-		4EB31CEB19C3639400156653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone_craig.storyboard; sourceTree = "<group>"; };
 		A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewController.h; sourceTree = "<group>"; };
 		A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewController.m; sourceTree = "<group>"; };
 		A6315CD319C3412200435C37 /* ProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileHeaderView.h; sourceTree = "<group>"; };
@@ -76,6 +74,12 @@
 		A643C41B19AF2CF10053505F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A643C41D19AF2CF10053505F /* maskedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = maskedTests.m; sourceTree = "<group>"; };
 		A6557CE219B74FA60064DABC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A65E296519C35DC600E68804 /* SwappedListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwappedListController.h; sourceTree = "<group>"; };
+		A65E296619C35DC600E68804 /* SwappedListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwappedListController.m; sourceTree = "<group>"; };
+		A65E296819C35EDA00E68804 /* SwappedListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwappedListCell.h; sourceTree = "<group>"; };
+		A65E296919C35EDA00E68804 /* SwappedListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwappedListCell.m; sourceTree = "<group>"; };
+		A65E296B19C3654F00E68804 /* ExploreCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreCollectionViewCell.h; sourceTree = "<group>"; };
+		A65E296C19C3654F00E68804 /* ExploreCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreCollectionViewCell.m; sourceTree = "<group>"; };
 		A66FB90E19B5D6050062CC0F /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		A66FB91019B5D75A0062CC0F /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		A6D2D1D319C31CB500A7D88B /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
@@ -154,16 +158,19 @@
 				A643C3FB19AF2CF00053505F /* AppDelegate.h */,
 				A643C3FC19AF2CF00053505F /* AppDelegate.m */,
 				A643C3FE19AF2CF00053505F /* Main_iPhone.storyboard */,
-				4EB31CEA19C3639400156653 /* Main_iPhone_craig.storyboard */,
-				4EB31CE719C35C8000156653 /* ExploreCollectionViewCell.h */,
-				4EB31CE819C35C8000156653 /* ExploreCollectionViewCell.m */,
 				A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */,
 				A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */,
+				A65E296B19C3654F00E68804 /* ExploreCollectionViewCell.h */,
+				A65E296C19C3654F00E68804 /* ExploreCollectionViewCell.m */,
 				A6315CD319C3412200435C37 /* ProfileHeaderView.h */,
 				A6315CD419C3412200435C37 /* ProfileHeaderView.m */,
+				A65E296519C35DC600E68804 /* SwappedListController.h */,
+				A65E296619C35DC600E68804 /* SwappedListController.m */,
 				A6D2D1D919C32E2B00A7D88B /* ExploreCollectionViewController.h */,
 				A6D2D1DA19C32E2B00A7D88B /* ExploreCollectionViewController.m */,
 				A6D2D1D619C3230500A7D88B /* PostTableViewCell.h */,
+				A65E296819C35EDA00E68804 /* SwappedListCell.h */,
+				A65E296919C35EDA00E68804 /* SwappedListCell.m */,
 				A6D2D1D719C3230500A7D88B /* PostTableViewCell.m */,
 				A6D2D1D319C31CB500A7D88B /* FeedTableViewController.h */,
 				A6D2D1D419C31CB500A7D88B /* FeedTableViewController.m */,
@@ -290,7 +297,6 @@
 				A66FB90F19B5D6050062CC0F /* image.jpg in Resources */,
 				A66FB91119B5D75A0062CC0F /* image2.jpg in Resources */,
 				A643C40B19AF2CF00053505F /* Images.xcassets in Resources */,
-				4EB31CEC19C3639400156653 /* Main_iPhone_craig.storyboard in Resources */,
 				A643C40019AF2CF00053505F /* Main_iPhone.storyboard in Resources */,
 				A643C3F719AF2CF00053505F /* InfoPlist.strings in Resources */,
 			);
@@ -348,11 +354,13 @@
 				A6D2D1D519C31CB500A7D88B /* FeedTableViewController.m in Sources */,
 				A6D2D1D819C3230500A7D88B /* PostTableViewCell.m in Sources */,
 				A6D2D1DB19C32E2B00A7D88B /* ExploreCollectionViewController.m in Sources */,
-				4EB31CE919C35C8000156653 /* ExploreCollectionViewCell.m in Sources */,
 				A6315CD519C3412200435C37 /* ProfileHeaderView.m in Sources */,
 				A643C40919AF2CF00053505F /* SecondViewController.m in Sources */,
 				A643C3FD19AF2CF00053505F /* AppDelegate.m in Sources */,
 				A643C40619AF2CF00053505F /* FirstViewController.m in Sources */,
+				A65E296D19C3654F00E68804 /* ExploreCollectionViewCell.m in Sources */,
+				A65E296719C35DC600E68804 /* SwappedListController.m in Sources */,
+				A65E296A19C35EDA00E68804 /* SwappedListCell.m in Sources */,
 				A643C3F919AF2CF00053505F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,14 +384,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4EB31CEA19C3639400156653 /* Main_iPhone_craig.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4EB31CEB19C3639400156653 /* Base */,
-			);
-			name = Main_iPhone_craig.storyboard;
-			sourceTree = "<group>";
-		};
 		A643C3F519AF2CF00053505F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileHeaderView : UICollectionReusableView
-@property (weak, nonatomic) IBOutlet UILabel *swappedList;
+@property (weak, nonatomic) IBOutlet UIButton *swappedList;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 
 @end
