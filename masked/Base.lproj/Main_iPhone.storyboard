@@ -125,10 +125,10 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="explore" id="FjU-aa-pf5" customClass="ExploreCollectionViewCell">
-                                <rect key="frame" x="0.0" y="65" width="106.5" height="106.5"/>
+                                <rect key="frame" x="0.0" y="65" width="106.59999847412109" height="106.59999847412109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="106.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="106.59999847412109" height="106.59999847412109"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.jpg" id="QT3-T7-2Qz">
@@ -357,7 +357,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="second" id="Z7h-1E-pvt"/>
                     <connections>
                         <outlet property="imageView" destination="l5u-6d-Oos" id="uw8-vl-gHt"/>
                     </connections>
@@ -540,11 +540,11 @@
             </objects>
             <point key="canvasLocation" x="-939" y="125"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Profile-->
         <scene sceneID="zfC-EC-fn4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LAi-FQ-mfL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="RxU-6c-R81"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="RxU-6c-R81"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fgm-mm-3Yo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
