@@ -1,18 +1,21 @@
 //
-//  SwappedListController.m
+//  NotificationController.m
 //  masked
 //
 //  Created by Kelvin Tamzil on 13/09/2014.
 //  Copyright (c) 2014 leinvaim. All rights reserved.
 //
 
-#import "SwappedListController.h"
-#import "SwappedListCell.h"
-@interface SwappedListController ()
+#import "NotificationController.h"
+#import "RequestCell.h"
+#import "NotificationCell.h"
+
+@interface NotificationController ()
+@property (nonatomic, strong) NSArray *requests;
 
 @end
 
-@implementation SwappedListController
+@implementation NotificationController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +29,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://ec2-54-206-66-123.ap-southeast-2.compute.amazonaws.com/masked/api/index.php/me/requests" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        self.requests = responseObject;
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,24 +57,51 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
+    if (section == 0){
+        return [self.requests count];
+    }
+    return 3;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+ 
+    if (section == 0){
+        return @"request";
+    } else{
+        return @"notification";
+    }
+    
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SwappedListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"swappedList" forIndexPath:indexPath];
+
+    UITableViewCell *cell;
+//        RequestCell *cell = [tableView dequeueReusableCellWithIdentifier:@"test" forIndexPath:indexPath];
+//    cell = [tableView dequeueReusableCellWithIdentaifier:@"request" forIndexPath:indexPath];
     
-    cell.peopleList.titleLabel.text = @"People one";
+    RequestCell *requestCell;
+    NotificationCell *notifCell;
+    if(indexPath.section == 0) {
+        requestCell = [tableView dequeueReusableCellWithIdentifier:@"request" forIndexPath:indexPath];
+        NSDictionary *request = [self.requests objectAtIndex:indexPath.row];
+        requestCell.userRequestNameLabel.titleLabel.text = [[request objectForKey:@"requestor"] objectForKey:@"name"]; //request.requestor.name;
+        
+        requestCell.userRequestPic.imageView.image = [UIImage imageNamed:@"image.jpg"];
+        cell = requestCell;
+    } else {
+        notifCell = [tableView dequeueReusableCellWithIdentifier:@"notification" forIndexPath:indexPath];
+        notifCell.notifLabel.text = @"bla bla like your photo";
+        cell = notifCell;
+    }
     
     
     return cell;
