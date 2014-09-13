@@ -66,7 +66,7 @@
                                                     withReuseIdentifier:@"profileHeader"
                                                            forIndexPath:indexPath];
         header.swappedList.titleLabel.text = @"List people";
-    
+        header.profilePic.image = [UIImage imageNamed:(@"image2.jpg")];
 //        header.swappedList.text = @"hello world";
 //        header.headerLabel.text = @"Car Image Gallery";
     }

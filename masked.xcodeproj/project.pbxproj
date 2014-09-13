@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5957390F43564F3F8DE80D60 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D67BCED5774094A1C07DBE /* libPods.a */; };
+		A60C9E9219C3D83600A1F87F /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60C9E9119C3D83600A1F87F /* NotificationController.m */; };
+		A60C9E9519C3E39300A1F87F /* RequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A60C9E9419C3E39300A1F87F /* RequestCell.m */; };
+		A60C9E9819C3E3A900A1F87F /* NotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A60C9E9719C3E3A900A1F87F /* NotificationCell.m */; };
 		A6315CD219C3355700435C37 /* ProfileCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */; };
 		A6315CD519C3412200435C37 /* ProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6315CD419C3412200435C37 /* ProfileHeaderView.m */; };
 		A643C3ED19AF2CF00053505F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A643C3EC19AF2CF00053505F /* Foundation.framework */; };
@@ -48,6 +51,12 @@
 
 /* Begin PBXFileReference section */
 		07D67BCED5774094A1C07DBE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60C9E9019C3D83600A1F87F /* NotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		A60C9E9119C3D83600A1F87F /* NotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		A60C9E9319C3E39300A1F87F /* RequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestCell.h; sourceTree = "<group>"; };
+		A60C9E9419C3E39300A1F87F /* RequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestCell.m; sourceTree = "<group>"; };
+		A60C9E9619C3E3A900A1F87F /* NotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCell.h; sourceTree = "<group>"; };
+		A60C9E9719C3E3A900A1F87F /* NotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCell.m; sourceTree = "<group>"; };
 		A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewController.h; sourceTree = "<group>"; };
 		A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewController.m; sourceTree = "<group>"; };
 		A6315CD319C3412200435C37 /* ProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileHeaderView.h; sourceTree = "<group>"; };
@@ -158,6 +167,12 @@
 				A643C3FB19AF2CF00053505F /* AppDelegate.h */,
 				A643C3FC19AF2CF00053505F /* AppDelegate.m */,
 				A643C3FE19AF2CF00053505F /* Main_iPhone.storyboard */,
+				A60C9E9319C3E39300A1F87F /* RequestCell.h */,
+				A60C9E9419C3E39300A1F87F /* RequestCell.m */,
+				A60C9E9619C3E3A900A1F87F /* NotificationCell.h */,
+				A60C9E9719C3E3A900A1F87F /* NotificationCell.m */,
+				A60C9E9019C3D83600A1F87F /* NotificationController.h */,
+				A60C9E9119C3D83600A1F87F /* NotificationController.m */,
 				A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */,
 				A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */,
 				A65E296B19C3654F00E68804 /* ExploreCollectionViewCell.h */,
@@ -351,8 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6315CD219C3355700435C37 /* ProfileCollectionViewController.m in Sources */,
+				A60C9E9819C3E3A900A1F87F /* NotificationCell.m in Sources */,
 				A6D2D1D519C31CB500A7D88B /* FeedTableViewController.m in Sources */,
 				A6D2D1D819C3230500A7D88B /* PostTableViewCell.m in Sources */,
+				A60C9E9519C3E39300A1F87F /* RequestCell.m in Sources */,
 				A6D2D1DB19C32E2B00A7D88B /* ExploreCollectionViewController.m in Sources */,
 				A6315CD519C3412200435C37 /* ProfileHeaderView.m in Sources */,
 				A643C40919AF2CF00053505F /* SecondViewController.m in Sources */,
@@ -360,6 +377,7 @@
 				A643C40619AF2CF00053505F /* FirstViewController.m in Sources */,
 				A65E296D19C3654F00E68804 /* ExploreCollectionViewCell.m in Sources */,
 				A65E296719C35DC600E68804 /* SwappedListController.m in Sources */,
+				A60C9E9219C3D83600A1F87F /* NotificationController.m in Sources */,
 				A65E296A19C35EDA00E68804 /* SwappedListCell.m in Sources */,
 				A643C3F919AF2CF00053505F /* main.m in Sources */,
 			);
