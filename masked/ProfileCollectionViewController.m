@@ -34,6 +34,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+  
+}
+
+- (void)setUser:(NSDictionary *)user
+{
+  if (_user != user) {
+    _user = user;
+    self.title = [user objectForKey:@"name"];
+    // Get the users profile pictures from the server
+    
+  }
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

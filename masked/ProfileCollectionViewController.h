@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileCollectionViewController : UICollectionViewController
-@property (weak, nonatomic) IBOutlet UIImageView *profilePicImageView;
-
+@property (nonatomic, weak) NSDictionary *user;
 @end
