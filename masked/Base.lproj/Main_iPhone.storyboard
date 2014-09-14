@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -125,14 +125,14 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="explore" id="FjU-aa-pf5" customClass="ExploreCollectionViewCell">
-                                <rect key="frame" x="0.0" y="65" width="107" height="107"/>
+                                <rect key="frame" x="0.0" y="65" width="106.5" height="106.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="107" height="107"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="106.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.jpg" id="QT3-T7-2Qz">
-                                            <rect key="frame" x="-1" y="-1" width="105" height="106"/>
+                                            <rect key="frame" x="-1" y="-1" width="104" height="105"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>
@@ -410,6 +410,9 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                             <state key="normal" title="Comment"/>
+                                            <connections>
+                                                <segue destination="Bbq-Uk-eLU" kind="push" id="bpb-wc-PSl"/>
+                                            </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="caZ-Ij-n9E">
                                             <rect key="frame" x="10" y="56" width="300" height="300"/>
@@ -603,11 +606,46 @@
                             <outlet property="delegate" destination="9TB-Rs-v4m" id="2gs-9x-Wa2"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="hello world!" id="uze-wp-ioB"/>
+                    <navigationItem key="navigationItem" title="profile" id="uze-wp-ioB"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hz8-cC-h9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="-586"/>
+            <point key="canvasLocation" x="247" y="-586"/>
+        </scene>
+        <!--Comment Controller-->
+        <scene sceneID="oh6-H0-1i0">
+            <objects>
+                <viewController id="Bbq-Uk-eLU" customClass="CommentController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KMb-LK-h5J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="bpr-br-SbH">
+                                <rect key="frame" x="0.0" y="384" width="320" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="XFf-i6-Mct">
+                                        <rect key="frame" x="8" y="9" width="304" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1122485139" green="0.46245451180000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="RpD-dg-dXE"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="keyboardToolbar" destination="bpr-br-SbH" id="vm4-5u-P1l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JfK-lm-4gq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="14"/>
         </scene>
     </scenes>
     <resources>
