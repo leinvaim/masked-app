@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PostTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *postImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
-
+@property (weak, nonatomic) IBOutlet UIButton *userNameButton;
+@property (weak, nonatomic) IBOutlet UIButton *profileImageButton;
 @end

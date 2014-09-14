@@ -8,6 +8,7 @@
 
 #import "FeedTableViewController.h"
 #import "PostTableViewCell.h"
+#import "ProfileCollectionViewController.h"
 
 @interface FeedTableViewController ()
 @property (strong, nonatomic) NSArray *posts;
@@ -26,18 +27,19 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-  
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://ec2-54-206-66-123.ap-southeast-2.compute.amazonaws.com/masked/api/index.php/me/feed" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"response object is %@", responseObject);
-        self.posts = responseObject;
-        NSLog(@"posts are %@", [self.posts objectAtIndex:0]);
-        [self.tableView reloadData];
+  [super viewDidLoad];
 
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-      NSLog(@"Error: %@", error);
-    }];
+  NSLog(@"loading posts");
+  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+  [manager GET:@"http://ec2-54-206-66-123.ap-southeast-2.compute.amazonaws.com/masked/api/index.php/me/feed" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+      NSLog(@"response object is %@", responseObject);
+      self.posts = responseObject;
+      NSLog(@"posts are %@", [self.posts objectAtIndex:0]);
+      [self.tableView reloadData];
+
+  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    NSLog(@"Error: %@", error);
+  }];
   
     
     // Uncomment the following line to preserve selection between presentations.
@@ -51,6 +53,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if ([[segue identifier] isEqualToString:@"showUser"])
+  {
+    // Get reference to the destination view controller
+    ProfileCollectionViewController *profileVC = [segue destinationViewController];
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    NSDictionary *post = [self.posts objectAtIndex:indexPath.row];
+    
+    profileVC.user = [post objectForKey:@"user"];
+  }
+}
+
+- (IBAction)showUser:(id)sender {
+  [self performSegueWithIdentifier:@"showUser" sender:self];
 }
 
 #pragma mark - Table view data source
@@ -69,29 +90,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"post" forIndexPath:indexPath];
+  NSDictionary *post = [self.posts objectAtIndex:indexPath.row];
+  PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"post" forIndexPath:indexPath];
+  NSURL *url = [NSURL URLWithString:[post objectForKey:@"imageUrl"]];
+  NSData *data = [NSData dataWithContentsOfURL:url];
   
-    NSDictionary *post = [self.posts objectAtIndex:indexPath.row];
-    NSURL *url = [NSURL URLWithString:[post objectForKey:@"imageUrl"]];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-  
-    cell.userNameLabel.text = [[post objectForKey:@"user"] objectForKey:@"name"];
-    cell.postImageView.image = [UIImage imageWithData:data];
-//  cell.postImageView.image = [UIImage imageNamed:@"image.jpg"];
-    cell.profileImageView.image = [UIImage imageNamed:@"image2.jpg"];
-//
-//    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    }
-    
-    // Configure the cell...
-//    cell.textLabel.text = @"hello";
-//    cell.detailTextLabel.text = @"world";
-//    
-    return cell;
+  [cell.userNameButton setTitle:[[post objectForKey:@"user"] objectForKey:@"name"] forState:UIControlStateNormal];
+  [cell.profileImageButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
+  cell.postImageView.image = [UIImage imageWithData:data];
+
+  return cell;
 }
 
 /*
