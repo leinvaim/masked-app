@@ -398,18 +398,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="399"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JBw-Yq-kcR">
-                                            <rect key="frame" x="10" y="360" width="30" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JBw-Yq-kcR">
+                                            <rect key="frame" x="10" y="359" width="63" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Like">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
+                                            <state key="normal" title="Like (0)"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Fn-0w-eKv">
-                                            <rect key="frame" x="47" y="360" width="97" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Fn-0w-eKv">
+                                            <rect key="frame" x="81" y="359" width="97" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                            <state key="normal" title="Comment"/>
+                                            <state key="normal" title="Comment (0)"/>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="caZ-Ij-n9E">
                                             <rect key="frame" x="10" y="56" width="300" height="300"/>
@@ -437,6 +435,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="likeButton" destination="JBw-Yq-kcR" id="yTq-FG-fkt"/>
                                     <outlet property="postImageView" destination="caZ-Ij-n9E" id="kTj-X4-c4Q"/>
                                     <outlet property="profileImageButton" destination="3CD-lq-BQ1" id="IxX-Q8-Ttd"/>
                                     <outlet property="userNameButton" destination="3KH-np-xKt" id="6wx-6S-wV2"/>

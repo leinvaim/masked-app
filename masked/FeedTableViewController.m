@@ -99,6 +99,7 @@
   [cell.profileImageButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
   cell.postImageView.image = [UIImage imageWithData:data];
 
+  [cell.likeButton setTitle:[NSString stringWithFormat:@"Like (%d)", [[post objectForKey:@"likes"] count]] forState:UIControlStateNormal];
   return cell;
 }
 
