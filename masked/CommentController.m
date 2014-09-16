@@ -7,9 +7,14 @@
 //
 
 #import "CommentController.h"
+#import "AnnonCommentCell.h"
 
-@interface CommentController ()
+@interface CommentController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *keyboardToolbar;
+@property (weak, nonatomic) IBOutlet UITableView *commentTableView;
+@property (weak, nonatomic) IBOutlet UITextField *addCommentField;
+@property (strong, nonatomic) NSMutableArray *comments;
+
 
 @end
 
@@ -25,14 +30,34 @@
     return self;
 }
 
+- (IBAction)textFieldFinished:(id)sender
+{
+//    [sender keyboardWillHide:nil];
+    if (self.addCommentField.text.length == 0){
+        return;
+    }
+    
+    [self.comments addObject:@{@"text":self.addCommentField.text}];
+    NSLog(@"comments array is %@", self.comments);
+    self.addCommentField.text = @"";
+    [self.commentTableView reloadData];
+    [self.addCommentField resignFirstResponder];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.commentTableView.dataSource = self;
+    self.commentTableView.delegate = self;
+    self.comments = [NSMutableArray array];
 }
+
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
@@ -57,9 +82,12 @@
     NSDictionary* info = [notification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
-    CGRect frame = self.keyboardToolbar.frame;
-    frame.origin.y = self.view.frame.size.height - kbSize.height - frame.size.height;
-    self.keyboardToolbar.frame = frame;
+    CGRect keyboardToolbarFrame = self.keyboardToolbar.frame;
+    CGRect commentTableFrame = self.commentTableView.frame;
+    keyboardToolbarFrame.origin.y = self.view.frame.size.height - kbSize.height - keyboardToolbarFrame.size.height;
+    commentTableFrame.size.height = keyboardToolbarFrame.origin.y - self.commentTableView.frame.origin.y;
+    self.commentTableView.frame = commentTableFrame;
+    self.keyboardToolbar.frame = keyboardToolbarFrame;
     
     [UIView commitAnimations];
 }
@@ -68,9 +96,12 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     
-    CGRect frame = self.keyboardToolbar.frame;
-    frame.origin.y = self.view.frame.size.height;
-    self.keyboardToolbar.frame = frame;
+    CGRect keyboardToolbarframe = self.keyboardToolbar.frame;
+    CGRect commentTableFrame = self.commentTableView.frame;
+    keyboardToolbarframe.origin.y = self.view.frame.size.height - keyboardToolbarframe.size.height - self.tabBarController.tabBar.frame.size.height;
+    commentTableFrame.size.height = keyboardToolbarframe.origin.y - self.commentTableView.frame.origin.y;
+    self.keyboardToolbar.frame = keyboardToolbarframe;
+    self.commentTableView.frame = commentTableFrame;
     
     [UIView commitAnimations];
 }
@@ -84,5 +115,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSLog(@"counts %d", [self.comments count]);
+    return [self.comments count];
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AnnonCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"annonCell" forIndexPath:indexPath];
+    cell.annonImage.image = [UIImage imageNamed:@"image.jpg"];
+    NSDictionary *comment = [self.comments objectAtIndex:indexPath.row];
+    cell.annonLabel.text = [comment objectForKey:@"text"];
+    return cell;
+}
 
 @end
