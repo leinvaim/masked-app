@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>F10DB8C3-26E2-4929-A26B-4BE0ADD4629D</string>
+	<string>F47E1DB6-2E87-4CEE-87AE-51BE4AA4DA42</string>
 	<key>IDESourceControlProjectName</key>
 	<string>masked</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>40A3F3D4-53AD-4707-B8D1-D1815BDF4EA2</key>
-		<string>https://github.com/leinvaim/masked-app</string>
+		<key>891BE557-EA5C-4019-B9F7-BB1125F84580</key>
+		<string>https://github.com/leinvaim/masked-app.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>masked.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>40A3F3D4-53AD-4707-B8D1-D1815BDF4EA2</key>
+		<key>891BE557-EA5C-4019-B9F7-BB1125F84580</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/leinvaim/masked-app</string>
+	<string>https://github.com/leinvaim/masked-app.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>40A3F3D4-53AD-4707-B8D1-D1815BDF4EA2</string>
+	<string>891BE557-EA5C-4019-B9F7-BB1125F84580</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>40A3F3D4-53AD-4707-B8D1-D1815BDF4EA2</string>
+			<string>891BE557-EA5C-4019-B9F7-BB1125F84580</string>
 			<key>IDESourceControlWCCName</key>
-			<string>masked-app</string>
+			<string>masked</string>
 		</dict>
 	</array>
 </dict>
