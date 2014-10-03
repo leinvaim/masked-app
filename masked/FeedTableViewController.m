@@ -9,6 +9,7 @@
 #import "FeedTableViewController.h"
 #import "PostTableViewCell.h"
 #import "ProfileCollectionViewController.h"
+#import "ApiManager.h"
 
 @interface FeedTableViewController ()
 @property (strong, nonatomic) NSArray *posts;
@@ -29,19 +30,6 @@
 {
   [super viewDidLoad];
 
-  NSLog(@"loading posts");
-  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-  [manager GET:@"http://ec2-54-206-66-123.ap-southeast-2.compute.amazonaws.com/masked/api/index.php/me/feed" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-      NSLog(@"response object is %@", responseObject);
-      self.posts = responseObject;
-      NSLog(@"posts are %@", [self.posts objectAtIndex:0]);
-      [self.tableView reloadData];
-
-  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    NSLog(@"Error: %@", error);
-  }];
-  
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -49,6 +37,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+  [[ApiManager sharedManager] getPostsInFeed:^(NSArray *posts) {
+    self.posts = posts;
+    [self.tableView reloadData];
+  } failure:nil];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
