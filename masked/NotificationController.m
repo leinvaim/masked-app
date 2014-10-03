@@ -9,6 +9,7 @@
 #import "NotificationController.h"
 #import "RequestCell.h"
 #import "NotificationCell.h"
+#import "ApiManager.h"
 
 @interface NotificationController ()
 @property (nonatomic, strong) NSArray *requests;
@@ -29,22 +30,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
 
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://ec2-54-206-66-123.ap-southeast-2.compute.amazonaws.com/masked/api/index.php/me/requests" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        self.requests = responseObject;
-        [self.tableView reloadData];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+- (void)viewDidAppear:(BOOL)animated
+{
+  [[ApiManager sharedManager] getRequests:^(NSArray *requests) {
+    self.requests = requests;
+    [self.tableView reloadData];
+  } failure:nil];
 }
 
 - (void)didReceiveMemoryWarning

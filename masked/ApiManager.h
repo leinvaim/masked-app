@@ -23,4 +23,7 @@
                 success:(void (^)(NSArray *posts))success
                 failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+- (void)getRequests:(void (^)(NSArray *requests))success
+            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
 @end

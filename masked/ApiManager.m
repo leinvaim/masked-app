@@ -89,4 +89,22 @@
             }];
 }
 
+- (void)getRequests:(void (^)(NSArray *requests))success
+            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+{
+  [self.manager GET:@"me/requests"
+         parameters:nil
+            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              success(responseObject);
+            }
+            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              NSLog(@"Error: Couldn't get requests");
+              NSLog(@"Error: %@", error);
+              if(failure) {
+                failure(operation, error);
+              }
+            }];
+
+}
+
 @end
