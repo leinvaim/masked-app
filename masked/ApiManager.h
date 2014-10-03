@@ -26,4 +26,6 @@
 - (void)getRequests:(void (^)(NSArray *requests))success
             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+- (void)getNotifications:(void (^)(NSArray *notifications))success
+                 failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 @end

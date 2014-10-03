@@ -13,7 +13,7 @@
 
 @interface NotificationController ()
 @property (nonatomic, strong) NSArray *requests;
-
+@property (nonatomic, strong) NSArray *notifications;
 @end
 
 @implementation NotificationController
@@ -38,6 +38,11 @@
     self.requests = requests;
     [self.tableView reloadData];
   } failure:nil];
+  
+  [[ApiManager sharedManager] getNotifications:^(NSArray *notifications) {
+    self.notifications = notifications;
+    [self.tableView reloadData];
+  } failure:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,16 +65,16 @@
     if (section == 0){
         return [self.requests count];
     }
-    return 3;
+    return [self.notifications count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
  
     if (section == 0){
-        return @"request";
+        return @"Swap Requests";
     } else{
-        return @"notification";
+        return @"Notifications";
     }
     
 }
@@ -86,7 +91,7 @@
     if(indexPath.section == 0) {
         requestCell = [tableView dequeueReusableCellWithIdentifier:@"request" forIndexPath:indexPath];
         NSDictionary *request = [self.requests objectAtIndex:indexPath.row];
-        requestCell.userRequestNameLabel.titleLabel.text = [[request objectForKey:@"requestor"] objectForKey:@"name"]; //request.requestor.name;
+        requestCell.userRequestNameLabel.titleLabel.text = [[request objectForKey:@"requestor"] objectForKey:@"username"]; //request.requestor.name;
         
         requestCell.userRequestPic.imageView.image = [UIImage imageNamed:@"image.jpg"];
         cell = requestCell;
