@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ED8D0F719DE8A1100AEE5FE /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED8D0F619DE8A1100AEE5FE /* ApiManager.m */; };
 		5957390F43564F3F8DE80D60 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D67BCED5774094A1C07DBE /* libPods.a */; };
 		A60C9E9219C3D83600A1F87F /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60C9E9119C3D83600A1F87F /* NotificationController.m */; };
 		A60C9E9519C3E39300A1F87F /* RequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A60C9E9419C3E39300A1F87F /* RequestCell.m */; };
@@ -51,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		07D67BCED5774094A1C07DBE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ED8D0F519DE8A1100AEE5FE /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
+		4ED8D0F619DE8A1100AEE5FE /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 		A60C9E9019C3D83600A1F87F /* NotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
 		A60C9E9119C3D83600A1F87F /* NotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		A60C9E9319C3E39300A1F87F /* RequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestCell.h; sourceTree = "<group>"; };
@@ -126,6 +129,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ED8D0F919DE8B8900AEE5FE /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				A60C9E9619C3E3A900A1F87F /* NotificationCell.h */,
+				A60C9E9719C3E3A900A1F87F /* NotificationCell.m */,
+				A60C9E9019C3D83600A1F87F /* NotificationController.h */,
+				A60C9E9119C3D83600A1F87F /* NotificationController.m */,
+			);
+			name = Notifications;
+			sourceTree = "<group>";
+		};
+		4ED8D0FA19DE8BA800AEE5FE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */,
+				A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */,
+				A6315CD319C3412200435C37 /* ProfileHeaderView.h */,
+				A6315CD419C3412200435C37 /* ProfileHeaderView.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		4ED8D0FB19DE8BC200AEE5FE /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				A65E296B19C3654F00E68804 /* ExploreCollectionViewCell.h */,
+				A65E296C19C3654F00E68804 /* ExploreCollectionViewCell.m */,
+				A6D2D1D919C32E2B00A7D88B /* ExploreCollectionViewController.h */,
+				A6D2D1DA19C32E2B00A7D88B /* ExploreCollectionViewController.m */,
+			);
+			name = Explore;
+			sourceTree = "<group>";
+		};
+		4ED8D0FC19DE8BD200AEE5FE /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				A6D2D1D619C3230500A7D88B /* PostTableViewCell.h */,
+				A6D2D1D719C3230500A7D88B /* PostTableViewCell.m */,
+				A6D2D1D319C31CB500A7D88B /* FeedTableViewController.h */,
+				A6D2D1D419C31CB500A7D88B /* FeedTableViewController.m */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		4ED8D0FD19DE8BE800AEE5FE /* Swap */ = {
+			isa = PBXGroup;
+			children = (
+				A65E296519C35DC600E68804 /* SwappedListController.h */,
+				A65E296619C35DC600E68804 /* SwappedListController.m */,
+				A65E296819C35EDA00E68804 /* SwappedListCell.h */,
+				A65E296919C35EDA00E68804 /* SwappedListCell.m */,
+				A60C9E9319C3E39300A1F87F /* RequestCell.h */,
+				A60C9E9419C3E39300A1F87F /* RequestCell.m */,
+			);
+			name = Swap;
+			sourceTree = "<group>";
+		};
+		4ED8D0FE19DE8C0B00AEE5FE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4ED8D0F519DE8A1100AEE5FE /* ApiManager.h */,
+				4ED8D0F619DE8A1100AEE5FE /* ApiManager.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		4ED8D0FF19DE8C1B00AEE5FE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4ED8D0FC19DE8BD200AEE5FE /* Feed */,
+				4ED8D0F919DE8B8900AEE5FE /* Notifications */,
+				4ED8D0FA19DE8BA800AEE5FE /* Profile */,
+				4ED8D0FD19DE8BE800AEE5FE /* Swap */,
+				4ED8D0FB19DE8BC200AEE5FE /* Explore */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
 		A643C3E019AF2CF00053505F = {
 			isa = PBXGroup;
 			children = (
@@ -164,31 +245,11 @@
 			children = (
 				A66FB90E19B5D6050062CC0F /* image.jpg */,
 				A66FB91019B5D75A0062CC0F /* image2.jpg */,
+				4ED8D0FE19DE8C0B00AEE5FE /* Services */,
 				A643C3FB19AF2CF00053505F /* AppDelegate.h */,
 				A643C3FC19AF2CF00053505F /* AppDelegate.m */,
 				A643C3FE19AF2CF00053505F /* Main_iPhone.storyboard */,
-				A60C9E9319C3E39300A1F87F /* RequestCell.h */,
-				A60C9E9419C3E39300A1F87F /* RequestCell.m */,
-				A6D2D1D619C3230500A7D88B /* PostTableViewCell.h */,
-				A6D2D1D719C3230500A7D88B /* PostTableViewCell.m */,
-				A60C9E9619C3E3A900A1F87F /* NotificationCell.h */,
-				A60C9E9719C3E3A900A1F87F /* NotificationCell.m */,
-				A60C9E9019C3D83600A1F87F /* NotificationController.h */,
-				A60C9E9119C3D83600A1F87F /* NotificationController.m */,
-				A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */,
-				A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */,
-				A65E296B19C3654F00E68804 /* ExploreCollectionViewCell.h */,
-				A65E296C19C3654F00E68804 /* ExploreCollectionViewCell.m */,
-				A6315CD319C3412200435C37 /* ProfileHeaderView.h */,
-				A6315CD419C3412200435C37 /* ProfileHeaderView.m */,
-				A65E296519C35DC600E68804 /* SwappedListController.h */,
-				A65E296619C35DC600E68804 /* SwappedListController.m */,
-				A6D2D1D919C32E2B00A7D88B /* ExploreCollectionViewController.h */,
-				A6D2D1DA19C32E2B00A7D88B /* ExploreCollectionViewController.m */,
-				A65E296819C35EDA00E68804 /* SwappedListCell.h */,
-				A65E296919C35EDA00E68804 /* SwappedListCell.m */,
-				A6D2D1D319C31CB500A7D88B /* FeedTableViewController.h */,
-				A6D2D1D419C31CB500A7D88B /* FeedTableViewController.m */,
+				4ED8D0FF19DE8C1B00AEE5FE /* Application */,
 				A643C40419AF2CF00053505F /* FirstViewController.h */,
 				A643C40519AF2CF00053505F /* FirstViewController.m */,
 				A643C40719AF2CF00053505F /* SecondViewController.h */,
@@ -377,6 +438,7 @@
 				A643C40619AF2CF00053505F /* FirstViewController.m in Sources */,
 				A65E296D19C3654F00E68804 /* ExploreCollectionViewCell.m in Sources */,
 				A65E296719C35DC600E68804 /* SwappedListController.m in Sources */,
+				4ED8D0F719DE8A1100AEE5FE /* ApiManager.m in Sources */,
 				A60C9E9219C3D83600A1F87F /* NotificationController.m in Sources */,
 				A65E296A19C35EDA00E68804 /* SwappedListCell.m in Sources */,
 				A643C3F919AF2CF00053505F /* main.m in Sources */,

@@ -132,7 +132,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.jpg" id="QT3-T7-2Qz">
-                                            <rect key="frame" x="-1" y="-1" width="105" height="106"/>
+                                            <rect key="frame" x="-1" y="-1" width="104" height="104"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>
