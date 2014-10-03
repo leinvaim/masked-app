@@ -127,6 +127,21 @@
   
 }
 
+- (void)likePost:(NSDictionary *)post
+         success:(void (^)(NSDictionary *like))success
+         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+{
+  [self.manager POST:[NSString stringWithFormat:@"posts/%@/likes", [post objectForKey:@"id"]] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    success(responseObject);
+  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    NSLog(@"Error: Couldn't like post %@", post);
+    NSLog(@"Error: %@", error);
+    if(failure) {
+      failure(operation, error);
+    }
+  }];
+}
+
 - (void)uploadNormalImage:(UIImage *)normalImage maskedImage:(UIImage *)maskedImage text:(NSString *)text
 {
   NSString* normalPath = [[FileManager sharedManager] storeImage:normalImage asfileName:@"normal.png"];

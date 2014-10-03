@@ -61,9 +61,31 @@
   }
 }
 
+#pragma mark - Actions
+
 - (IBAction)showUser:(id)sender {
   [self performSegueWithIdentifier:@"showUser" sender:self];
 }
+
+- (IBAction)likePost:(id)sender {
+  CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+  NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+
+  NSLog(@"Debug: Liking post %d", indexPath.row);
+  NSDictionary *post = [self.posts objectAtIndex:indexPath.row];
+
+  [[ApiManager sharedManager] likePost:post success:^(NSDictionary *like) {
+    NSLog(@"Debug: Increasing like button count");
+    PostTableViewCell *postCell = (PostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    [postCell.likeButton setTitle:[NSString stringWithFormat:@"Like (%lu)", ((unsigned long)[[post objectForKey:@"likes"] count]+1)] forState:UIControlStateNormal];
+    
+  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    
+  }];
+//      NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//  NSLog(@"Wants to like %ld", (long)indexPath.row);
+}
+
 
 #pragma mark - Table view data source
 
@@ -90,7 +112,7 @@
   [cell.profileImageButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
   cell.postImageView.image = [UIImage imageWithData:data];
 
-  [cell.likeButton setTitle:[NSString stringWithFormat:@"Like (%d)", [[post objectForKey:@"likes"] count]] forState:UIControlStateNormal];
+  [cell.likeButton setTitle:[NSString stringWithFormat:@"Like (%lu)", (unsigned long)[[post objectForKey:@"likes"] count]] forState:UIControlStateNormal];
   return cell;
 }
 

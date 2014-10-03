@@ -398,6 +398,9 @@
                                             <rect key="frame" x="10" y="359" width="63" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Like (0)"/>
+                                            <connections>
+                                                <action selector="likePost:" destination="4Lx-i9-M7S" eventType="touchUpInside" id="uy4-1i-3l6"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Fn-0w-eKv">
                                             <rect key="frame" x="81" y="359" width="97" height="30"/>

@@ -31,4 +31,8 @@
 
 - (void)uploadNormalImage:(UIImage *)normalImage maskedImage:(UIImage *)maskedImage text:(NSString *)text;
 
+- (void)likePost:(NSDictionary *)post
+         success:(void (^)(NSDictionary *like))success
+         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
 @end
