@@ -35,11 +35,7 @@
     [self.tableView reloadData];
   } failure:nil];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//  [[ApiManager sharedManager] uploadNormalImage:[UIImage imageNamed:@"image.jpg"] maskedImage:[UIImage imageNamed:@"image2.jpg"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

@@ -141,6 +141,15 @@
 			name = "My Profile";
 			sourceTree = "<group>";
 		};
+		4ED7BB7119DEE63D00A49837 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				A643C40719AF2CF00053505F /* SecondViewController.h */,
+				A643C40819AF2CF00053505F /* SecondViewController.m */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
 		4ED8D0F919DE8B8900AEE5FE /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +219,7 @@
 		4ED8D0FF19DE8C1B00AEE5FE /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				4ED7BB7119DEE63D00A49837 /* Camera */,
 				4ED8D0FC19DE8BD200AEE5FE /* Feed */,
 				4ED8D0F919DE8B8900AEE5FE /* Notifications */,
 				4ED8D0FA19DE8BA800AEE5FE /* User Profiles */,
@@ -265,8 +275,6 @@
 				4ED8D0FF19DE8C1B00AEE5FE /* Application */,
 				A643C40419AF2CF00053505F /* FirstViewController.h */,
 				A643C40519AF2CF00053505F /* FirstViewController.m */,
-				A643C40719AF2CF00053505F /* SecondViewController.h */,
-				A643C40819AF2CF00053505F /* SecondViewController.m */,
 				A643C40A19AF2CF00053505F /* Images.xcassets */,
 				A643C3F319AF2CF00053505F /* Supporting Files */,
 			);

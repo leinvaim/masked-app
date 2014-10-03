@@ -126,4 +126,43 @@
   
 }
 
+- (void)uploadNormalImage:(UIImage *)normalImage maskedImage:(UIImage *)maskedImage
+{
+  NSLog(@"Uploading image");
+//  UIImage *image = [UIImage imageNamed:@"image.jpg"];
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                       NSUserDomainMask, YES);
+  NSString *documentsDirectory = [paths objectAtIndex:0];
+  NSString* normalPath = [documentsDirectory stringByAppendingPathComponent:
+                    @"normal.png" ];
+  NSData* normalData = UIImagePNGRepresentation(normalImage);
+  [normalData writeToFile:normalPath atomically:YES];
+  
+  //  UIImage *image = [UIImage imageNamed:@"image.jpg"];
+  NSString* maskedPath = [documentsDirectory stringByAppendingPathComponent:
+                    @"masked" ];
+  NSData* maskedData = UIImagePNGRepresentation(maskedImage);
+  [maskedData writeToFile:maskedPath atomically:YES];
+  
+  NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:@"http://ec2-54-206-66-123.ap-southeast-2.compute.amazonaws.com/masked/api/index.php/me/posts" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    [formData appendPartWithFileURL:[NSURL fileURLWithPath:normalPath] name:@"normal" fileName:@"normal.png" mimeType:@"image/png" error:nil];
+    
+    [formData appendPartWithFileURL:[NSURL fileURLWithPath:maskedPath] name:@"masked" fileName:@"masked.png" mimeType:@"image/png" error:nil];
+    
+  } error:nil];
+  
+  AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+  NSProgress *progress = nil;
+  
+  NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithStreamedRequest:request progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+    if (error) {
+      NSLog(@"Error: %@", error);
+    } else {
+      NSLog(@"%@ %@", response, responseObject);
+    }
+  }];
+  
+  [uploadTask resume];
+}
+
 @end

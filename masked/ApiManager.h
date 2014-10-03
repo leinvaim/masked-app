@@ -28,4 +28,7 @@
 
 - (void)getNotifications:(void (^)(NSArray *notifications))success
                  failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
+- (void)uploadNormalImage:(UIImage *)normalImage maskedImage:(UIImage *)maskedImage;
+
 @end
