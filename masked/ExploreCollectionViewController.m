@@ -8,6 +8,7 @@
 
 #import "ExploreCollectionViewController.h"
 #import "ExploreCollectionViewCell.h"
+#import "ApiManager.h"
 
 @interface ExploreCollectionViewController ()
 @property (strong, nonatomic) NSArray *posts;
@@ -27,16 +28,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-  
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://ec2-54-206-66-123.ap-southeast-2.compute.amazonaws.com/masked/api/index.php/me/explore" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-      self.posts = responseObject;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [[ApiManager sharedManager] getPostsInExplore:^(NSArray *posts) {
+      self.posts = posts;
       [self.collectionView reloadData];
-      
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-      NSLog(@"Error: %@", error);
-    }];
+    } failure:nil];
 }
 
 - (void)didReceiveMemoryWarning

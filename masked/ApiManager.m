@@ -53,7 +53,23 @@
               }
             }];
 }
-//- (void)getOnlineUsersSuccess:(void (^)(NSArray *onlineUsers))success
-//                      failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
+- (void)getPostsInExplore:(void (^)(NSArray *posts))success
+                  failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+{
+  [self.manager GET:@"me/explore"
+         parameters:nil
+            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              success(responseObject);
+            }
+            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              NSLog(@"Error: Couldn't get posts in explore");
+              NSLog(@"Error: %@", error);
+              if(failure) {
+                failure(operation, error);
+              }
+            }];
+
+}
 
 @end

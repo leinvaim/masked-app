@@ -16,4 +16,7 @@
 - (void)getPostsInFeed:(void (^)(NSArray *posts))success
                failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+- (void)getPostsInExplore:(void (^)(NSArray *posts))success
+               failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
 @end
