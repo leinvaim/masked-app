@@ -7,6 +7,7 @@
 //
 
 #import "ApiManager.h"
+#import "FileManager.h"
 
 @interface ApiManager ()
 @property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
@@ -126,25 +127,12 @@
   
 }
 
-- (void)uploadNormalImage:(UIImage *)normalImage maskedImage:(UIImage *)maskedImage
+- (void)uploadNormalImage:(UIImage *)normalImage maskedImage:(UIImage *)maskedImage text:(NSString *)text
 {
-  NSLog(@"Uploading image");
-//  UIImage *image = [UIImage imageNamed:@"image.jpg"];
-  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                       NSUserDomainMask, YES);
-  NSString *documentsDirectory = [paths objectAtIndex:0];
-  NSString* normalPath = [documentsDirectory stringByAppendingPathComponent:
-                    @"normal.png" ];
-  NSData* normalData = UIImagePNGRepresentation(normalImage);
-  [normalData writeToFile:normalPath atomically:YES];
+  NSString* normalPath = [[FileManager sharedManager] storeImage:normalImage asfileName:@"normal.png"];
+  NSString* maskedPath = [[FileManager sharedManager] storeImage:normalImage asfileName:@"masked.png"];
   
-  //  UIImage *image = [UIImage imageNamed:@"image.jpg"];
-  NSString* maskedPath = [documentsDirectory stringByAppendingPathComponent:
-                    @"masked" ];
-  NSData* maskedData = UIImagePNGRepresentation(maskedImage);
-  [maskedData writeToFile:maskedPath atomically:YES];
-  
-  NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:@"http://ec2-54-206-66-123.ap-southeast-2.compute.amazonaws.com/masked/api/index.php/me/posts" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+  NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:@"http://ec2-54-206-66-123.ap-southeast-2.compute.amazonaws.com/masked/api/index.php/me/posts" parameters:@{@"text": text} constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
     [formData appendPartWithFileURL:[NSURL fileURLWithPath:normalPath] name:@"normal" fileName:@"normal.png" mimeType:@"image/png" error:nil];
     
     [formData appendPartWithFileURL:[NSURL fileURLWithPath:maskedPath] name:@"masked" fileName:@"masked.png" mimeType:@"image/png" error:nil];
@@ -163,6 +151,23 @@
   }];
   
   [uploadTask resume];
+  
+  
+  [progress addObserver:self
+             forKeyPath:@"fractionCompleted"
+                options:NSKeyValueObservingOptionNew
+                context:NULL];
+  
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+  if ([keyPath isEqualToString:@"fractionCompleted"]) {
+    NSProgress *progress = (NSProgress *)object;
+    NSLog(@"progress = %f", progress.fractionCompleted);
+  } else {
+    [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+  }
 }
 
 @end

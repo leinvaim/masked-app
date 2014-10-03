@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E62EF5919DEF0E30049FFAB /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E62EF5819DEF0E30049FFAB /* FileManager.m */; };
 		4ED7BB6F19DED84100A49837 /* MyProfileCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED7BB6E19DED84100A49837 /* MyProfileCollectionViewController.m */; };
 		4ED8D0F719DE8A1100AEE5FE /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED8D0F619DE8A1100AEE5FE /* ApiManager.m */; };
 		5957390F43564F3F8DE80D60 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D67BCED5774094A1C07DBE /* libPods.a */; };
@@ -53,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		07D67BCED5774094A1C07DBE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E62EF5719DEF0E30049FFAB /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		4E62EF5819DEF0E30049FFAB /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		4ED7BB6D19DED84100A49837 /* MyProfileCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileCollectionViewController.h; sourceTree = "<group>"; };
 		4ED7BB6E19DED84100A49837 /* MyProfileCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileCollectionViewController.m; sourceTree = "<group>"; };
 		4ED8D0F519DE8A1100AEE5FE /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 			children = (
 				4ED8D0F519DE8A1100AEE5FE /* ApiManager.h */,
 				4ED8D0F619DE8A1100AEE5FE /* ApiManager.m */,
+				4E62EF5719DEF0E30049FFAB /* FileManager.h */,
+				4E62EF5819DEF0E30049FFAB /* FileManager.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				A60C9E9219C3D83600A1F87F /* NotificationController.m in Sources */,
 				A65E296A19C35EDA00E68804 /* SwappedListCell.m in Sources */,
 				A643C3F919AF2CF00053505F /* main.m in Sources */,
+				4E62EF5919DEF0E30049FFAB /* FileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

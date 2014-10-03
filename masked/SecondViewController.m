@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 #import <ImageIO/ImageIO.h>
+#import "ApiManager.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 @interface SecondViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -200,12 +201,14 @@
     [self.imageView2 setContentMode:UIViewContentModeScaleAspectFit];
     //    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView2.frame = self.view.frame;
-    
+  
+  
     //    [self.imageView resi]
     //        self.imageView.bounds.origin.y = 0;
     [self.view addSubview:self.imageView2];
     
-    
+  
+  [[ApiManager sharedManager] uploadNormalImage:self.imageView.image maskedImage:self.imageView2.image text:@"hello world!"];
 }
 
 
