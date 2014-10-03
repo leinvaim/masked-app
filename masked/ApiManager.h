@@ -19,4 +19,8 @@
 - (void)getPostsInExplore:(void (^)(NSArray *posts))success
                failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+- (void)getPostsForUser:(NSDictionary *)user
+                success:(void (^)(NSArray *posts))success
+                failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
 @end

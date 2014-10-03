@@ -69,7 +69,24 @@
                 failure(operation, error);
               }
             }];
+}
 
+- (void)getPostsForUser:(NSDictionary *)user
+                success:(void (^)(NSArray *posts))success
+                failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+{
+  [self.manager GET:[NSString stringWithFormat:@"users/%@/posts", [user objectForKey:@"id"]]
+         parameters:nil
+            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              success(responseObject);
+            }
+            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              NSLog(@"Error: Couldn't get posts in explore");
+              NSLog(@"Error: %@", error);
+              if(failure) {
+                failure(operation, error);
+              }
+            }];
 }
 
 @end
