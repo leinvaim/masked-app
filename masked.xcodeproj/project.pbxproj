@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ED7BB6F19DED84100A49837 /* MyProfileCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED7BB6E19DED84100A49837 /* MyProfileCollectionViewController.m */; };
 		4ED8D0F719DE8A1100AEE5FE /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED8D0F619DE8A1100AEE5FE /* ApiManager.m */; };
 		5957390F43564F3F8DE80D60 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D67BCED5774094A1C07DBE /* libPods.a */; };
 		A60C9E9219C3D83600A1F87F /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60C9E9119C3D83600A1F87F /* NotificationController.m */; };
@@ -52,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		07D67BCED5774094A1C07DBE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ED7BB6D19DED84100A49837 /* MyProfileCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileCollectionViewController.h; sourceTree = "<group>"; };
+		4ED7BB6E19DED84100A49837 /* MyProfileCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileCollectionViewController.m; sourceTree = "<group>"; };
 		4ED8D0F519DE8A1100AEE5FE /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		4ED8D0F619DE8A1100AEE5FE /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 		A60C9E9019C3D83600A1F87F /* NotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
@@ -129,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ED7BB7019DED84700A49837 /* My Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4ED7BB6D19DED84100A49837 /* MyProfileCollectionViewController.h */,
+				4ED7BB6E19DED84100A49837 /* MyProfileCollectionViewController.m */,
+			);
+			name = "My Profile";
+			sourceTree = "<group>";
+		};
 		4ED8D0F919DE8B8900AEE5FE /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +152,7 @@
 			name = Notifications;
 			sourceTree = "<group>";
 		};
-		4ED8D0FA19DE8BA800AEE5FE /* Profile */ = {
+		4ED8D0FA19DE8BA800AEE5FE /* User Profiles */ = {
 			isa = PBXGroup;
 			children = (
 				A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */,
@@ -148,7 +160,7 @@
 				A6315CD319C3412200435C37 /* ProfileHeaderView.h */,
 				A6315CD419C3412200435C37 /* ProfileHeaderView.m */,
 			);
-			name = Profile;
+			name = "User Profiles";
 			sourceTree = "<group>";
 		};
 		4ED8D0FB19DE8BC200AEE5FE /* Explore */ = {
@@ -173,7 +185,7 @@
 			name = Feed;
 			sourceTree = "<group>";
 		};
-		4ED8D0FD19DE8BE800AEE5FE /* Swap */ = {
+		4ED8D0FD19DE8BE800AEE5FE /* Swaps */ = {
 			isa = PBXGroup;
 			children = (
 				A65E296519C35DC600E68804 /* SwappedListController.h */,
@@ -183,7 +195,7 @@
 				A60C9E9319C3E39300A1F87F /* RequestCell.h */,
 				A60C9E9419C3E39300A1F87F /* RequestCell.m */,
 			);
-			name = Swap;
+			name = Swaps;
 			sourceTree = "<group>";
 		};
 		4ED8D0FE19DE8C0B00AEE5FE /* Services */ = {
@@ -200,9 +212,10 @@
 			children = (
 				4ED8D0FC19DE8BD200AEE5FE /* Feed */,
 				4ED8D0F919DE8B8900AEE5FE /* Notifications */,
-				4ED8D0FA19DE8BA800AEE5FE /* Profile */,
-				4ED8D0FD19DE8BE800AEE5FE /* Swap */,
+				4ED8D0FA19DE8BA800AEE5FE /* User Profiles */,
+				4ED8D0FD19DE8BE800AEE5FE /* Swaps */,
 				4ED8D0FB19DE8BC200AEE5FE /* Explore */,
+				4ED7BB7019DED84700A49837 /* My Profile */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -426,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED7BB6F19DED84100A49837 /* MyProfileCollectionViewController.m in Sources */,
 				A6315CD219C3355700435C37 /* ProfileCollectionViewController.m in Sources */,
 				A60C9E9819C3E3A900A1F87F /* NotificationCell.m in Sources */,
 				A6D2D1D519C31CB500A7D88B /* FeedTableViewController.m in Sources */,

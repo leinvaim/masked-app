@@ -113,6 +113,7 @@
   [self.manager GET:@"me/notifications"
          parameters:nil
             success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              NSLog(@"Debug: Got notifications");
               success(responseObject);
             }
             failure:^(AFHTTPRequestOperation *operation, NSError *error) {
