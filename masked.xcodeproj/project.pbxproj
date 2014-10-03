@@ -20,7 +20,6 @@
 		A643C3F719AF2CF00053505F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A643C3F519AF2CF00053505F /* InfoPlist.strings */; };
 		A643C3F919AF2CF00053505F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A643C3F819AF2CF00053505F /* main.m */; };
 		A643C3FD19AF2CF00053505F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A643C3FC19AF2CF00053505F /* AppDelegate.m */; };
-		A643C40019AF2CF00053505F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A643C3FE19AF2CF00053505F /* Main_iPhone.storyboard */; };
 		A643C40619AF2CF00053505F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A643C40519AF2CF00053505F /* FirstViewController.m */; };
 		A643C40919AF2CF00053505F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A643C40819AF2CF00053505F /* SecondViewController.m */; };
 		A643C40B19AF2CF00053505F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A643C40A19AF2CF00053505F /* Images.xcassets */; };
@@ -35,6 +34,9 @@
 		A65E296D19C3654F00E68804 /* ExploreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A65E296C19C3654F00E68804 /* ExploreCollectionViewCell.m */; };
 		A66FB90F19B5D6050062CC0F /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A66FB90E19B5D6050062CC0F /* image.jpg */; };
 		A66FB91119B5D75A0062CC0F /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A66FB91019B5D75A0062CC0F /* image2.jpg */; };
+		A6AC2B3119C55385005E73A7 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6AC2B2F19C55385005E73A7 /* Main_iPhone.storyboard */; };
+		A6AC2B3419C5C125005E73A7 /* CommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AC2B3319C5C125005E73A7 /* CommentController.m */; };
+		A6AC2B3719C841E5005E73A7 /* AnnonCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AC2B3619C841E5005E73A7 /* AnnonCommentCell.m */; };
 		A6D2D1D519C31CB500A7D88B /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2D1D419C31CB500A7D88B /* FeedTableViewController.m */; };
 		A6D2D1D819C3230500A7D88B /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2D1D719C3230500A7D88B /* PostTableViewCell.m */; };
 		A6D2D1DB19C32E2B00A7D88B /* ExploreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D2D1DA19C32E2B00A7D88B /* ExploreCollectionViewController.m */; };
@@ -74,7 +76,6 @@
 		A643C3FA19AF2CF00053505F /* masked-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "masked-Prefix.pch"; sourceTree = "<group>"; };
 		A643C3FB19AF2CF00053505F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A643C3FC19AF2CF00053505F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A643C3FF19AF2CF00053505F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A643C40419AF2CF00053505F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		A643C40519AF2CF00053505F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		A643C40719AF2CF00053505F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -94,6 +95,11 @@
 		A65E296C19C3654F00E68804 /* ExploreCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreCollectionViewCell.m; sourceTree = "<group>"; };
 		A66FB90E19B5D6050062CC0F /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		A66FB91019B5D75A0062CC0F /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		A6AC2B3019C55385005E73A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		A6AC2B3219C5C125005E73A7 /* CommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentController.h; sourceTree = "<group>"; };
+		A6AC2B3319C5C125005E73A7 /* CommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentController.m; sourceTree = "<group>"; };
+		A6AC2B3519C841E5005E73A7 /* AnnonCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnonCommentCell.h; sourceTree = "<group>"; };
+		A6AC2B3619C841E5005E73A7 /* AnnonCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnonCommentCell.m; sourceTree = "<group>"; };
 		A6D2D1D319C31CB500A7D88B /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		A6D2D1D419C31CB500A7D88B /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		A6D2D1D619C3230500A7D88B /* PostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTableViewCell.h; sourceTree = "<group>"; };
@@ -243,13 +249,43 @@
 		A643C3F219AF2CF00053505F /* masked */ = {
 			isa = PBXGroup;
 			children = (
+				A6AC2B2F19C55385005E73A7 /* Main_iPhone.storyboard */,
+				A6AC2B3519C841E5005E73A7 /* AnnonCommentCell.h */,
+				A6AC2B3619C841E5005E73A7 /* AnnonCommentCell.m */,
+				A6AC2B3219C5C125005E73A7 /* CommentController.h */,
+				A6AC2B3319C5C125005E73A7 /* CommentController.m */,
 				A66FB90E19B5D6050062CC0F /* image.jpg */,
 				A66FB91019B5D75A0062CC0F /* image2.jpg */,
 				4ED8D0FE19DE8C0B00AEE5FE /* Services */,
 				A643C3FB19AF2CF00053505F /* AppDelegate.h */,
 				A643C3FC19AF2CF00053505F /* AppDelegate.m */,
+<<<<<<< HEAD
 				A643C3FE19AF2CF00053505F /* Main_iPhone.storyboard */,
 				4ED8D0FF19DE8C1B00AEE5FE /* Application */,
+=======
+				A60C9E9319C3E39300A1F87F /* RequestCell.h */,
+				A60C9E9419C3E39300A1F87F /* RequestCell.m */,
+				A6D2D1D619C3230500A7D88B /* PostTableViewCell.h */,
+				A6D2D1D719C3230500A7D88B /* PostTableViewCell.m */,
+				A60C9E9619C3E3A900A1F87F /* NotificationCell.h */,
+				A60C9E9719C3E3A900A1F87F /* NotificationCell.m */,
+				A60C9E9019C3D83600A1F87F /* NotificationController.h */,
+				A60C9E9119C3D83600A1F87F /* NotificationController.m */,
+				A6315CD019C3355700435C37 /* ProfileCollectionViewController.h */,
+				A6315CD119C3355700435C37 /* ProfileCollectionViewController.m */,
+				A65E296B19C3654F00E68804 /* ExploreCollectionViewCell.h */,
+				A65E296C19C3654F00E68804 /* ExploreCollectionViewCell.m */,
+				A6315CD319C3412200435C37 /* ProfileHeaderView.h */,
+				A6315CD419C3412200435C37 /* ProfileHeaderView.m */,
+				A65E296519C35DC600E68804 /* SwappedListController.h */,
+				A65E296619C35DC600E68804 /* SwappedListController.m */,
+				A6D2D1D919C32E2B00A7D88B /* ExploreCollectionViewController.h */,
+				A6D2D1DA19C32E2B00A7D88B /* ExploreCollectionViewController.m */,
+				A65E296819C35EDA00E68804 /* SwappedListCell.h */,
+				A65E296919C35EDA00E68804 /* SwappedListCell.m */,
+				A6D2D1D319C31CB500A7D88B /* FeedTableViewController.h */,
+				A6D2D1D419C31CB500A7D88B /* FeedTableViewController.m */,
+>>>>>>> FETCH_HEAD
 				A643C40419AF2CF00053505F /* FirstViewController.h */,
 				A643C40519AF2CF00053505F /* FirstViewController.m */,
 				A643C40719AF2CF00053505F /* SecondViewController.h */,
@@ -372,8 +408,8 @@
 			files = (
 				A66FB90F19B5D6050062CC0F /* image.jpg in Resources */,
 				A66FB91119B5D75A0062CC0F /* image2.jpg in Resources */,
+				A6AC2B3119C55385005E73A7 /* Main_iPhone.storyboard in Resources */,
 				A643C40B19AF2CF00053505F /* Images.xcassets in Resources */,
-				A643C40019AF2CF00053505F /* Main_iPhone.storyboard in Resources */,
 				A643C3F719AF2CF00053505F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +467,7 @@
 				A6D2D1D519C31CB500A7D88B /* FeedTableViewController.m in Sources */,
 				A6D2D1D819C3230500A7D88B /* PostTableViewCell.m in Sources */,
 				A60C9E9519C3E39300A1F87F /* RequestCell.m in Sources */,
+				A6AC2B3419C5C125005E73A7 /* CommentController.m in Sources */,
 				A6D2D1DB19C32E2B00A7D88B /* ExploreCollectionViewController.m in Sources */,
 				A6315CD519C3412200435C37 /* ProfileHeaderView.m in Sources */,
 				A643C40919AF2CF00053505F /* SecondViewController.m in Sources */,
@@ -441,6 +478,7 @@
 				4ED8D0F719DE8A1100AEE5FE /* ApiManager.m in Sources */,
 				A60C9E9219C3D83600A1F87F /* NotificationController.m in Sources */,
 				A65E296A19C35EDA00E68804 /* SwappedListCell.m in Sources */,
+				A6AC2B3719C841E5005E73A7 /* AnnonCommentCell.m in Sources */,
 				A643C3F919AF2CF00053505F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,20 +510,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A643C3FE19AF2CF00053505F /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A643C3FF19AF2CF00053505F /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
 		A643C41A19AF2CF10053505F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A643C41B19AF2CF10053505F /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A6AC2B2F19C55385005E73A7 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6AC2B3019C55385005E73A7 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
