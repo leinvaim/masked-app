@@ -28,14 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [[ApiManager sharedManager] getPostsInExplore:^(NSArray *posts) {
-      self.posts = posts;
-      [self.collectionView reloadData];
-    } failure:nil];
+  [[ApiManager sharedManager] getPostsInExplore:^(NSArray *posts) {
+    self.posts = posts;
+    [self.collectionView reloadData];
+  } failure:nil];
 }
 
 - (void)didReceiveMemoryWarning

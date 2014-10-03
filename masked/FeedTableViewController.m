@@ -29,6 +29,11 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  [[ApiManager sharedManager] getPostsInFeed:^(NSArray *posts) {
+    self.posts = posts;
+    [self.tableView reloadData];
+  } failure:nil];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -38,10 +43,6 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-  [[ApiManager sharedManager] getPostsInFeed:^(NSArray *posts) {
-    self.posts = posts;
-    [self.tableView reloadData];
-  } failure:nil];
 }
 - (void)didReceiveMemoryWarning
 {

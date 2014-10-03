@@ -30,10 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
+  
   [[ApiManager sharedManager] getRequests:^(NSArray *requests) {
     self.requests = requests;
     [self.tableView reloadData];
@@ -43,6 +40,12 @@
     self.notifications = notifications;
     [self.tableView reloadData];
   } failure:nil];
+  
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,7 +103,6 @@
         notifCell.notifLabel.text = @"bla bla like your photo";
         cell = notifCell;
     }
-    
     
     return cell;
 }
