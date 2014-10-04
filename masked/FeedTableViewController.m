@@ -10,6 +10,8 @@
 #import "PostTableViewCell.h"
 #import "ProfileCollectionViewController.h"
 #import "ApiManager.h"
+#import "UIImageView+AFNetworking.h"
+#import "UIButton+AFNetworking.h"
 
 @interface FeedTableViewController ()
 @property (strong, nonatomic) NSArray *posts;
@@ -30,7 +32,9 @@
 {
   [super viewDidLoad];
   
+  NSLog(@"Debug: Getting posts");
   [[ApiManager sharedManager] getPostsInFeed:^(NSArray *posts) {
+    NSLog(@"Debug: Got posts, rendering tableview");
     self.posts = posts;
     [self.tableView reloadData];
   } failure:nil];
@@ -71,14 +75,14 @@
   CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
   NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
 
-  NSLog(@"Debug: Liking post %d", indexPath.row);
+  NSLog(@"Debug: Liking post %ld", (long)indexPath.row);
   NSDictionary *post = [self.posts objectAtIndex:indexPath.row];
 
+  PostTableViewCell *postCell = (PostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+  [postCell.likeButton setTitle:[NSString stringWithFormat:@"Like (%lu)", ((unsigned long)[[post objectForKey:@"likes"] count]+1)] forState:UIControlStateNormal];
+  
   [[ApiManager sharedManager] likePost:post success:^(NSDictionary *like) {
     NSLog(@"Debug: Increasing like button count");
-    PostTableViewCell *postCell = (PostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-    [postCell.likeButton setTitle:[NSString stringWithFormat:@"Like (%lu)", ((unsigned long)[[post objectForKey:@"likes"] count]+1)] forState:UIControlStateNormal];
-    
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     
   }];
@@ -106,11 +110,12 @@
   NSDictionary *post = [self.posts objectAtIndex:indexPath.row];
   PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"post" forIndexPath:indexPath];
   NSURL *url = [NSURL URLWithString:[post objectForKey:@"imageUrl"]];
-  NSData *data = [NSData dataWithContentsOfURL:url];
+//  NSData *data = [NSData dataWithContentsOfURL:url];
   
   [cell.userNameButton setTitle:[[post objectForKey:@"user"] objectForKey:@"name"] forState:UIControlStateNormal];
-  [cell.profileImageButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
-  cell.postImageView.image = [UIImage imageWithData:data];
+  [cell.profileImageButton setImageForState:UIControlStateNormal withURL:url];
+//  [cell.profileImageButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
+  [cell.postImageView setImageWithURL:url];
 
   [cell.likeButton setTitle:[NSString stringWithFormat:@"Like (%lu)", (unsigned long)[[post objectForKey:@"likes"] count]] forState:UIControlStateNormal];
   return cell;
