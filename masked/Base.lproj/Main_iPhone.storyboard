@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - First-->
+        <!--First-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
                 <viewController title="First" id="CZ4-MO-1fc" customClass="FirstViewController" sceneMemberID="viewController">
@@ -109,7 +110,7 @@
             </objects>
             <point key="canvasLocation" x="496" y="-2142"/>
         </scene>
-        <!--Explore Collection View Controller - Explore-->
+        <!--Explore-->
         <scene sceneID="OE2-8m-JYD">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" title="Explore" id="BQJ-EX-ydX" customClass="ExploreCollectionViewController" sceneMemberID="viewController">
@@ -203,7 +204,7 @@
             </objects>
             <point key="canvasLocation" x="-435" y="1646"/>
         </scene>
-        <!--Profile Collection View Controller - hello world!-->
+        <!--hello world!-->
         <scene sceneID="r20-ih-hP6">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="avP-z2-v1z" customClass="ProfileCollectionViewController" sceneMemberID="viewController">
@@ -273,7 +274,7 @@
             </objects>
             <point key="canvasLocation" x="-156" y="832"/>
         </scene>
-        <!--Swapped List Controller - Swapped-->
+        <!--Swapped-->
         <scene sceneID="lft-M2-Zgx">
             <objects>
                 <tableViewController id="B0o-eR-cek" customClass="SwappedListController" sceneMemberID="viewController">
@@ -318,7 +319,7 @@
             </objects>
             <point key="canvasLocation" x="288" y="832"/>
         </scene>
-        <!--Second View Controller - Second-->
+        <!--Second-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
                 <viewController title="Second" id="QUy-BD-bpt" customClass="SecondViewController" sceneMemberID="viewController">
@@ -327,7 +328,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6d3-Zc-Tn4">
-                                <rect key="frame" x="140" y="371" width="54" height="30"/>
+                                <rect key="frame" x="250" y="397" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -341,7 +342,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jok-9g-uLk">
-                                <rect key="frame" x="20" y="387" width="95" height="30"/>
+                                <rect key="frame" x="16" y="397" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start masking">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -362,7 +363,7 @@
             </objects>
             <point key="canvasLocation" x="-895" y="-1350"/>
         </scene>
-        <!--Navigation Controller - Feed-->
+        <!--Feed-->
         <scene sceneID="pYg-7K-suc">
             <objects>
                 <navigationController definesPresentationContext="YES" id="vgM-0g-ifz" sceneMemberID="viewController">
@@ -378,7 +379,7 @@
             </objects>
             <point key="canvasLocation" x="-739" y="-636"/>
         </scene>
-        <!--Feed Table View Controller - Feed-->
+        <!--Feed-->
         <scene sceneID="NkK-OU-qLJ">
             <objects>
                 <tableViewController title="Feed" id="4Lx-i9-M7S" customClass="FeedTableViewController" sceneMemberID="viewController">
@@ -412,7 +413,7 @@
                                             <rect key="frame" x="10" y="56" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3KH-np-xKt">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3KH-np-xKt">
                                             <rect key="frame" x="55" y="11" width="255" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Persons Name">
@@ -422,7 +423,7 @@
                                                 <action selector="showUser:" destination="4Lx-i9-M7S" eventType="touchUpInside" id="lh1-lR-rEm"/>
                                             </connections>
                                         </button>
-                                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3CD-lq-BQ1">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3CD-lq-BQ1">
                                             <rect key="frame" x="10" y="11" width="37" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
@@ -478,7 +479,7 @@
             </objects>
             <point key="canvasLocation" x="-1948" y="-816"/>
         </scene>
-        <!--Navigation Controller - Explore-->
+        <!--Explore-->
         <scene sceneID="B6s-Ua-Hlg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hkd-oK-W1N" sceneMemberID="viewController">
@@ -497,7 +498,7 @@
             </objects>
             <point key="canvasLocation" x="-939" y="125"/>
         </scene>
-        <!--Navigation Controller - Profile-->
+        <!--Profile-->
         <scene sceneID="zfC-EC-fn4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LAi-FQ-mfL" sceneMemberID="viewController">
@@ -516,7 +517,7 @@
             </objects>
             <point key="canvasLocation" x="-698" y="832"/>
         </scene>
-        <!--Navigation Controller - Notification-->
+        <!--Notification-->
         <scene sceneID="Bf2-sZ-Uqp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TJr-8h-lWN" sceneMemberID="viewController">
@@ -536,7 +537,7 @@
             </objects>
             <point key="canvasLocation" x="-391" y="-2080"/>
         </scene>
-        <!--Profile Collection View Controller - User Profile-->
+        <!--User Profile-->
         <scene sceneID="tS8-bf-6bs">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" title="User Profile" id="9TB-Rs-v4m" customClass="ProfileCollectionViewController" sceneMemberID="viewController">
