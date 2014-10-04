@@ -35,4 +35,9 @@
          success:(void (^)(NSDictionary *like))success
          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+- (void)comment:(NSString *)text
+         onPost:(NSDictionary *)post
+        success:(void (^)(NSDictionary *like))success
+        failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
 @end
